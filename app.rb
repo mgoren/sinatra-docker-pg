@@ -5,7 +5,7 @@ require 'pry'
 require './lib/album'
 require "pg"
 
-DB = PG.connect({:dbname => "record_store"})
+# DB = PG.connect({:dbname => "record_store"})
 
 get('/') do
   redirect to('/albums')

@@ -19,5 +19,3 @@ services:
       - db
     stdin_open: true
     tty: true
-    environment:
-      - "test=${test}"
