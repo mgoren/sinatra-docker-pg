@@ -4,7 +4,7 @@ require 'album'
 require 'song'
 require 'pry'
 
-DB = PG.connect({:dbname => 'record_store_test'})
+DB = PG.connect({ dbname: 'record_store_test', host: 'db', user: 'postgres', password: 'password' })
 
 RSpec.configure do |config|
   config.after(:each) do

@@ -5,10 +5,7 @@ services:
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-    ports:
-      - "5432:5432"
   web:
     volumes:
       - .:/myapp
@@ -17,5 +14,6 @@ services:
       - "4567:4567"
     depends_on:
       - db
+    command: ["./wait-for-postgres.sh"]
     stdin_open: true
     tty: true
