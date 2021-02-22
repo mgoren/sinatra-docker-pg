@@ -40,12 +40,7 @@ docker-compose up --build
 # Run tests
 
 ```
-docker-compose run web rspec
-```
-
-or, if web container is already running:
-
-```
+docker-compose up --build
 docker ps
 docker exec -it [web_container_id] rspec
 ```
